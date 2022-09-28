@@ -1,0 +1,24 @@
+.navbar{
+    height: var(--navbar-height);
+    display: flex;
+    justify-content: space-between;
+    background-color: #fafafa;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    color: #282C34;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.user-stuff{
+    display: flex;
+    align-items: center;
+}

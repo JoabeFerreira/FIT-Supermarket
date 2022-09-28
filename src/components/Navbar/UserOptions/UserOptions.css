@@ -1,0 +1,10 @@
+.user-options{
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+.user-options p{
+    margin: 0 0.4rem;
+    font-weight: bold;
+}
