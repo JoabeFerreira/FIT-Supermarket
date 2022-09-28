@@ -1,15 +1,28 @@
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
+import { faCartShopping, faCheck } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { CartContext, CartType } from "../../CartProvider"
+import './ShoppingCart.css'
+import products from '../../../Data/Products.json'
+
 
 const ShoppingCart = () =>{
     const {prods} = useContext(CartContext) as CartType
-    console.log('produtos selecionados: ', prods)
+    const [panelOpen, setPanelOpen] = useState(false);    
+    const cardItems = products.filter(item => prods.includes(item.id))
     return <>
     <div className="shopping-cart">
-        <span><FontAwesomeIcon icon={faCartShopping} size="lg"/></span>
+        <span onClick={() => setPanelOpen(!panelOpen)}><FontAwesomeIcon icon={faCartShopping} size="lg"/></span>
+        <div className="cart-badge">{prods?.length}</div>
     </div>
+        <div className={`shopping-cart-panel${panelOpen ? ' open' : ''}`}>
+            <div>
+            {cardItems?.map(item => <div className="cart-item">{item.name}</div>)}
+            </div>
+        <div className="purchase-btn" onClick={() => alert("Compra realizada com sucesso :)")}>
+        <FontAwesomeIcon icon={faCheck} size="lg"/> Finalizar Compra
+        </div>
+        </div>
     </>
 }
 

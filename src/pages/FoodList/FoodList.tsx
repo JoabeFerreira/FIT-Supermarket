@@ -1,11 +1,11 @@
+import { useMemo } from "react";
 import ProductCheckList from "../../components/ProductsCheckList/ProductsCheckList";
+import products from '../../Data/Products.json'
 
 function FoodList() {
-    const foodList = [
-        {id: 1, productGroupId: 1, name: 'Achocolatado'},
-        {id: 2, productGroupId: 1, name: 'Açúcar'},
-        {id: 3, productGroupId: 1, name: 'Adoçante'}
-    ]
+
+    const foodList = useMemo(() => products.filter(p => p.productGroupId === 1), [])
+
     return ( <ProductCheckList listName="Alimentos" productList={foodList} />);
 }
 

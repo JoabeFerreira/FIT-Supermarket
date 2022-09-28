@@ -13,7 +13,7 @@ interface ProductListItem{
 const productListItems: ProductListItem[] = [
     {url: 'product-list/food', icon: faCarrot, text: 'Alimentos'},
     {url: 'product-list/beverages', icon: faWineBottle, text: 'Bebidas'},
-    {url: 'product-list/hygiene', icon: faCarrot, text: 'Higiene'},
+    {url: 'product-list/hygiene', icon: faToiletPaper, text: 'Higiene'},
 ] 
 function ProductListSelector() {
     const [selectorOpen, setSelectorOpen] = useState(false)
