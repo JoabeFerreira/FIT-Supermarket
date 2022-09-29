@@ -11,9 +11,9 @@ interface Props{
 }
 
 
-const Checkbox = (text: any, productId: number) =>{
+const Checkbox = (text: any, productId: number, hasStock: boolean) =>{
     const {prods, setProds} = useContext(CartContext) as CartType
-    const [checked, setChecked] = useState(prods.includes(productId))
+    const checked = prods.includes(productId)
     const updateCart = (checked: boolean): void => {
         if(checked){
             setProds([...prods, productId]);
@@ -21,7 +21,7 @@ const Checkbox = (text: any, productId: number) =>{
         }
         setProds(prods.filter(p => p !== productId))
     }
-    return (<div className={`checkbox${checked ? ' checked' : ''}`} key={productId} onClick={() => {updateCart(!checked); setChecked(!checked)}}>
+    return (<div className={`checkbox${checked ? ' checked' : ''}`} key={productId} onClick={() => {hasStock ? updateCart(!checked) : alert("Desculpe, o Produto selecionado encontra-se sem estoque no momento :(");}}>
         <FontAwesomeIcon icon={checked ? faCheckCircle : faCircle}/><p>{text}</p>
     </div>)
 }
@@ -30,7 +30,7 @@ const ProductCheckList = (props: Props) => {
     return ( <>
     <h1 className="list-name">{props.listName}</h1>
     <div className="checklist-container">
-        {props.productList?.map(p => Checkbox(p.name, p.id))}
+        {props.productList?.map(p => Checkbox(p.name, p.id, p.stock > 0))}
     </div> 
     </>
     );

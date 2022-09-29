@@ -1,11 +1,11 @@
 [
-    {"id": 1, "productGroupId": 1, "name": "Achocolatado"},
-    {"id": 2, "productGroupId": 1, "name": "Açúcar"},
-    {"id": 3, "productGroupId": 1, "name": "Adoçante"},
-    {"id": 4, "productGroupId": 2, "name": "Cerveja"},
-    {"id": 5, "productGroupId": 2, "name": "Refrigerante"},
-    {"id": 6, "productGroupId": 2, "name": "Água"},
-    {"id": 7, "productGroupId": 3, "name": "Papel Higienico"},
-    {"id": 8, "productGroupId": 3, "name": "Desodorante"},
-    {"id": 9, "productGroupId": 3, "name": "Fio Dental"}
+    {"id": 1, "productGroupId": 1, "name": "Achocolatado", "stock": 15},
+    {"id": 2, "productGroupId": 1, "name": "Açúcar", "stock": 0},
+    {"id": 3, "productGroupId": 1, "name": "Adoçante", "stock": 5},
+    {"id": 4, "productGroupId": 2, "name": "Cerveja", "stock": 0},
+    {"id": 5, "productGroupId": 2, "name": "Refrigerante", "stock": 0},
+    {"id": 6, "productGroupId": 2, "name": "Água", "stock": 25},
+    {"id": 7, "productGroupId": 3, "name": "Papel Higienico", "stock": 0},
+    {"id": 8, "productGroupId": 3, "name": "Desodorante", "stock": 60},
+    {"id": 9, "productGroupId": 3, "name": "Fio Dental", "stock": 150}
 ]

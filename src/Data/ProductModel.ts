@@ -1,5 +1,6 @@
 export interface Product{
     id: number,
     productGroupId: number,
-    name: string
+    name: string,
+    stock: number
 }
