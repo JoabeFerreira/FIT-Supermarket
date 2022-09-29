@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
 import CartProvider from "../CartProvider";
 import Navbar from "../Navbar/Navbar";
-
+import './Layout.css'
 function Layout() {
 
     return ( <>
         <CartProvider>
           <Navbar/>
-          <div style={{marginTop: 'calc(var(--navbar-height) + 1rem)'}}>
+          <div className="content-container">
               <Outlet/>
           </div>
         </CartProvider>

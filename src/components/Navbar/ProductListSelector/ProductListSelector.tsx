@@ -19,16 +19,12 @@ function ProductListSelector() {
     const [selectorOpen, setSelectorOpen] = useState(false)
 
     return ( <div className="product-list-container">
-        <div onClick={() => setSelectorOpen(!selectorOpen)} className={'product-list-btn'}
-        style={{cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center'
-            }}>
+        <div onClick={() => setSelectorOpen(!selectorOpen)} className={'product-list-btn'}>
             <p>Lista de Produtos</p> <FontAwesomeIcon icon={faAngleDown}/>
         </div>
         <div className={`product-list-selector${selectorOpen ? ' open' : ''}`}>
-         {productListItems?.map(item => (
-            <Link to={item.url} onClick={() => setSelectorOpen(false)}>
+         {productListItems?.map((item, index) => (
+            <Link to={item.url} key={index} onClick={() => setSelectorOpen(false)}>
                 <div className="product-list-item"><FontAwesomeIcon icon={item.icon}/> <p>{item.text}</p></div>
             </Link>
          ))}

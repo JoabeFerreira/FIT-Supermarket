@@ -8,9 +8,10 @@
     left: 0;
     display: none;
     flex-direction: column;
-    background-color: #EAF6F6;
+    background-color: #ffffff9c;
     padding: 0.25rem;
-    border-radius: 10px;
+    border-radius: 5px;
+    backdrop-filter: blur(4px);
 }
 
 .product-list-selector.open{
@@ -43,6 +44,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    font-size: 1.2rem;
 }
 
 .product-list-btn p{

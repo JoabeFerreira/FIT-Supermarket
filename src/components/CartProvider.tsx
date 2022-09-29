@@ -1,4 +1,4 @@
-import { Children, createContext, FC, useState } from "react";
+import { createContext, FC, useState } from "react";
 
 export interface CartType{
     prods: number[]

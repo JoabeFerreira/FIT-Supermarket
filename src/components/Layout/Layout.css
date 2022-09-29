@@ -1,0 +1,6 @@
+.content-container{
+    margin-top: var(--navbar-height);
+    background-color: rgb(234, 246, 246);
+    height: calc(100vh - var(--navbar-height) - 1rem);
+    padding-top: 1rem;
+}
