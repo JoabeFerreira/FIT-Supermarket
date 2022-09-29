@@ -13,7 +13,7 @@ interface Props{
 
 const Checkbox = (text: any, productId: number) =>{
     const {prods, setProds} = useContext(CartContext) as CartType
-    const [checked, setChecked] = useState(false)
+    const [checked, setChecked] = useState(prods.includes(productId))
     const updateCart = (checked: boolean): void => {
         if(checked){
             setProds([...prods, productId]);
